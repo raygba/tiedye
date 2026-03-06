@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tie-Dye Palette Generator</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <header>
+
+        <h1>Tie-Dye Palette Generator</h1>
+
+        <div>
+            <button type="button" id="darkBtn" onclick="darkMode()" title="Toggle dark mode"
+                aria-label="Toggle dark mode"><abbr>🌙</abbr></button>
+            <button type="button" id="fontBtn" onclick="toggleFont()" title="Toggle font" aria-label="Toggle font">🔤
+            </button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="myPalettes">
+            <section>
+                <h2>Current Palette</h2>
+                <ul id="currentPalette"></ul>
+                <button type="button" id="saveBtn">save</button>
+            </section>
+
+            <section id="savedPalettes">
+                <h2>Saved Palettes</h2>
+
+            </section>
+        </div>
+
+        <section>
+            <ul id="colorList">
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>made for my love 💚</p>
+        <p>&copy; <a href="https://github.com/raygba">raygba</a> 2026</p>
+    </footer>
+</body>
+
+</html>

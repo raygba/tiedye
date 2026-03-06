@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease color;
+}
+
+:root {
+    --black: #131313;
+    --white: #f5f5f5
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5rem;
+    width: 72%;
+    margin: 0 auto;
+    background: var(--white);
+    color: var(--black);
+
+    button {
+        cursor: pointer;
+        padding: initial;
+        margin: auto;
+        font-family: inherit;
+    }
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        height: 50px;
+        width: 50px;
+        transition: 0.3s ease transform;
+    }
+
+    button:hover {
+        transform: scale(1.3);
+    }
+}
+
+footer {
+    padding: 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#myPalettes,
+#colorList {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px inset darkgray;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    button:has(img) {
+        background: none;
+        border: none;
+    }
+
+    img {
+        max-width: 100px;
+        transition: 0.2s ease all;
+    }
+
+    img:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.275);
+    }
+
+    figure {
+        display: inline-block;
+        width: min-content;
+    }
+}
+
+#myPalettes {
+    section {
+        border: 2px inset darkgray;
+        padding: 1rem;
+
+        #saveBtn {
+            width: 100%;
+            margin: 1rem auto 0;
+            padding: 0.5rem 0;
+            border: 1px outset gray;
+            border-radius: 8px;
+        }
+
+        #saveBtn:active {
+            border: 1px inset gray;
+        }
+    }
+}
+
+#colorList {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    list-style-type: none;
+}
+
+/* JS toggle classes */
+
+.dark,
+.dark * {
+    color: var(--white);
+    background: var(--black);
+
+    #myPalettes,
+    #myPalettes>*,
+    #colorList {
+        border: 2px inset rgb(80, 80, 80);
+    }
+}
+
+.serif {
+    font-family: serif;
+    font-size: 108%;
+
+    main button {
+        font-family: serif;
+        font-size: 86%;
+    }
+}
