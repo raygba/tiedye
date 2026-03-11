@@ -120,7 +120,8 @@ var darkBtn = document.getElementById('darkBtn');
 function darkMode() {
     console.log('button clicked')
     document.body.classList.toggle('dark')
-    var darkBtn = document.getElementById('darkBtn')
+    var main = document.getElementsByTagName('main')
+    // var darkBtn = document.getElementById('darkBtn')
 }
 
 // toggle font
